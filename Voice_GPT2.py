@@ -15,3 +15,5 @@ def transcribe_audio_to_text(filename):
         audio = recognizer.record(source)
     try:
         return recognizer.recognizer_google(audio)
+    except:
+        print('Skipping unknown error')
