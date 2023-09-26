@@ -11,3 +11,7 @@ engine = pyttsx3.init()
 
 def transcribe_audio_to_text(filename):
     recognizer = sr.Recognizer()
+    with sr.AudioFile(filename) as source:
+        audio = recognizer.record(source)
+    try:
+        return recognizer.recognizer_google(audio)
