@@ -5,10 +5,10 @@ from gtts import gTTS  # Import gTTS for text-to-speech
 import time
 
 # Set your API key
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = "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"
 
 # Initialize the text-to-speech
-engine = pyttsx3.init()
+engine = pyttsx3.init(driverName='nsss')
 
 def transcribe_audio_to_text(filename):
     recognizer = sr.Recognizer()
