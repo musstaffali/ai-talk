@@ -27,4 +27,16 @@ def generate_response(prompt):
         stop=None,
         temperature=0.5,
     )
-    return response["choices"][0]["rext"]
+    return response["choices"][0]["text"]
+
+def speak_text(text):
+engine.say(text)
+engine runAndWait()
+
+def main():
+    while True:
+        # Wait for user to say "genius"
+        print("Say 'Genius' to start recording your question...")
+        with sr.Microphone() as source:
+            recognizer = ai.Recognizer()
+            audio = recognizer.listen(source)
